@@ -8,15 +8,18 @@
 #ifndef MYHUFFMAN_H_
 #define MYHUFFMAN_H_
 
-typedef struct htNode_
+typedef struct myhtNode_
 {
 	char symble;
 	struct htNode_* lchiled, rchild;
-} htNode;
+} myhtNode;
+
+typedef struct myhtTree_
+{
+	htNode * root;
+} myhtTree;
 
 
-
-
-
+myhtTree* buidHtTree(char* inputString);
 
 #endif /* MYHUFFMAN_H_ */

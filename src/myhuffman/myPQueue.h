@@ -10,7 +10,7 @@
 
 #include "myhuffman.h"
 
-#define TYPE htNode *
+#define TYPE myhtNode *
 #define MAX_SZ 256
 typedef struct myPQueueNode_
 {
