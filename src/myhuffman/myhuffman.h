@@ -11,15 +11,28 @@
 typedef struct myhtNode_
 {
 	char symble;
-	struct htNode_* lchiled, rchild;
+	struct myhtNode_* lchiled, *rchild;
 } myhtNode;
 
 typedef struct myhtTree_
 {
-	htNode * root;
+	myhtNode * root;
 } myhtTree;
 
+typedef struct myhlNode_
+{
+	char symble;
+	char* code;
+	struct myhlNode_* next;
+}myhlNode;
+
+typedef struct myhtTable_
+{
+	myhlNode * first;
+	myhlNode * last;
+}myhlTable;
 
 myhtTree* buidHtTree(char* inputString);
+myhlTable* buildHlTable(myhtTree* myhuffmanTree);
 
 #endif /* MYHUFFMAN_H_ */
